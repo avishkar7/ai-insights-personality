@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+  
+  /* Style for candidate info section */
+#info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width:80%
+}
+
+  /* Style for table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+  /* Style for table cells */
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+  
+  /* Style for candidate answers section */
+#answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    color: purple;
+}
+  
+  /* Style for graph section */
+#graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  /* Style for candidate photo */
+
+  
+  /* Style for candidate info */
+#info p {
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+  
+  /* Style for question section */
+#answers h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+  
+  /* Style for answer list */
+#answers ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+  
+  /* Style for answer items */
+#answers li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+  
+  /* Style for graph image */
+#graph img {
+    width: 100%;
+    height: auto;
+}
+
+ /* Style for table container */
+#table-container {
+    margin: 20px 0;
+}
+  
+
+
+.answers{
+    color:white;
+    padding: 10px;
+    background-color:#231E39;
+    font-size: 18px;
+    border-radius: 20px;
+    /* max-height: 1000px; */
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candidate Information</title>
+    <link rel="shortcut icon" href="../static/user.png" type="image/png">
+    <link rel="stylesheet" href="../static/trial.css">
+</head>
+<body>
+	{% if reg %}
+        <script>alert("{{ reg }}")</script>
+    {% endif %}
+	<form method="post" action="/prediction" enctype="multipart/form-data">
+		<h1>Candidate Information Form</h1>
+		<div class="form-group">
+			<label for="firstname">First Name:</label>
+			<input type="text" id="firstname" name="firstname" required>
+
+			<label for="lastname">Last Name:</label>
+			<input type="text" id="lastname" name="lastname" required>
+		</div>
+
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+		</div>
+
+		<div class="form-group">
+			<label for="college">College:</label>
+			<input type="text" id="college" name="college" required>
+		</div>
+
+		<div class="form-group">
+			<label for="stream">Specialization:</label>
+			<input type="text" id="stream" name="stream" required>
+		</div>
+
+		<div class="form-group">
+			<label for="age">Age:</label>
+			<input type="text" id="age" name="age" required>
+		</div>
+
+		<div class="form-group">
+			<label for="gender">Gender:</label>
+			<select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="resume" class="file-input-label">Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" class="file-input" required>
+		</div>
+
+		<div class="form-group">
+            <label for="photo" class="file-input-label">Photo:</label>
+            <input type="file" id="photo" name="photo" accept=".jpeg" class="file-input" required>
+		</div>
+    
+        <input type="submit" value="Submit">
+    </form>

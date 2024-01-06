@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Candidate Profile</title>
+    <link rel="stylesheet" href="../static/tryresult.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="info">
+        <div id="photo"></div>
+        <div>
+          <p>{{output['Name']}}</p>
+          <p>{{output['Mobile Number']}}</p>
+          <p>{{output['Email']}}</p>
+          <p>College: {{output['College']}}</p>
+          <p>Degree: {{output['Degree']}}</p>
+          <p>Specialization: {{output['Specialization']}}</p>
+          <p>Skills: {{output['Skills']}}</p>
+        </div>
+      </div>
+
+      <div id="table-container">
+        <table>
+            <caption style="font-size: 2.5em;">PERSONALITY PREDICTED</caption>
+            <tbody>
+              <tr>
+                <th>Prediction</th>
+                <th>Openness</th>
+                <th>Conscientiousness</th>
+                <th>Extraversion</th>
+                <th>Agreeableness</th>
+                <th>Neuroticism</th>
+              </tr>
+              <tr>
+                <td>Probability of Trait</td>
+                <td>{{predictions.pred_prob_cOPN}}</td>
+                <td>{{predictions.pred_prob_cCON}}</td>
+                <td>{{predictions.pred_prob_cEXT}}</td>
+                <td>{{predictions.pred_prob_cAGR}}</td>
+                <td>{{predictions.pred_prob_cNEU}}</td>
+              </tr>
+              <tr>
+                <td>Trait Category</td>
+                <td>{{predictions.pred_cOPN}}</td>
+                <td>{{predictions.pred_cCON}}</td>
+                <td>{{predictions.pred_cEXT}}</td>
+                <td>{{predictions.pred_cAGR}}</td>
+                <td>{{predictions.pred_cNEU}}</td>
+              </tr>
+              <tr>
+                <td>Trait Score</td>
+                <td>{{predictions.pred_sOPN}}</td>
+                <td>{{predictions.pred_sCON}}</td>
+                <td>{{predictions.pred_sEXT}}</td>
+                <td>{{predictions.pred_sAGR}}</td>
+                <td>{{predictions.pred_sNEU}}</td>
+      </div>
+
+      <div id="answers">
+        <!-- <h2>Answers</h2> -->
+            {% if responses %} {% for key , val in responses.items() %}
+            <p class='question'>{{ key }}</p>
+            <p class='answer'>{{val[0]}}</p>
+            <br>
+            {% endfor %} {% endif %}
+      </div>
+
+      <div id="graph">
+        <img src="../static/fer_output.png" alt="Emotion Analysis" />
+            <h2>Face Emotion Analysis</h2>
+      </div>
+    </div>
+  </body>
+</html>
